@@ -14,117 +14,27 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-container">
+    <div>
       <div className="card">
         <div>
-          {doctors.map((doctor) => (
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="doctor">
-                <div className="circle">
-                  <img src={doctor.image} alt="doctors" />
+          <ul className="home-container">
+            {doctors.map((doctor) => (
+              <li className="card-item">
+                <div className="col-12 col-md-6 col-lg-4">
+                  <div className="doctor">
+                    <div className="circle">
+                      <img src={doctor.image} alt="doctors" />
+                    </div>
+                    <h2 className="name">
+                      <Link to={`/DetailsPage/${doctor.id}`}>
+                        {doctor.name}
+                      </Link>
+                    </h2>
+                  </div>
                 </div>
-                <h2 className="name">
-                  <Link to={`/DetailsPage/${doctor.id}`}>{doctor.name}</Link>
-                </h2>
-              </div>
-            </div>
-          ))}
-        </div>
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img className="card-img-top" alt="imagee" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">My description</p>
-          <a href="#" className="btn btn-success">
-            Reserve
-          </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
